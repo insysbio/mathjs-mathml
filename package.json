@@ -1,0 +1,36 @@
+{
+  "name": "mathjs-mathml",
+  "version": "0.2.0",
+  "description": "Translation of mathjs object to MathML",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha test --recursive",
+    "test:cov": "nyc --reporter=lcov npm run test",
+    "coverall": "nyc --reporter=text-lcov npm run test | coveralls"
+  },
+  "keywords": [
+    "mathjs",
+    "MathML",
+    "XML"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insysbio/mathjs-mathml.git"
+  },
+  "contributors": [
+    "Evgeny Metelkin",
+    "Victoria Tkachenko"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/insysbio/mathjs-mathml/issues"
+  },
+  "homepage": "https://github.com/insysbio/mathjs-mathml#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.7",
+    "mathjs": "^5.10.3",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1"
+  }
+}
