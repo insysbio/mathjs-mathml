@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha test --recursive",
     "test:cov": "nyc --reporter=lcov npm run test",
-    "coverall": "nyc --reporter=text-lcov npm run test | coveralls"
+    "coveralls": "nyc --reporter=text-lcov npm run test | coveralls"
   },
   "keywords": [
     "mathjs",
