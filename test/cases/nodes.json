@@ -73,5 +73,35 @@
     "type": "Node",
     "formula": "x*y/z+a*exp(t)*log(15)",
     "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><plus/><apply><divide/><apply><times/><ci>x</ci><ci>y</ci></apply><ci>z</ci></apply><apply><times/><apply><times/><ci>a</ci><apply><exp/><ci>t</ci></apply></apply><apply><ln/><cn>15</cn></apply></apply></apply></math>"
+  },
+  "cube function": {
+    "type": "FunctionNode",
+    "formula": "cube(x)",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><power/><ci>x</ci><cn>3</cn></apply></math>"
+  },
+  "square function": {
+    "type": "FunctionNode",
+    "formula": "square(x)",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><power/><ci>x</ci><cn>2</cn></apply></math>"
+  },
+  "log with base": {
+    "type": "FunctionNode",
+    "formula": "log(x, base)",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><log/><logbase><ci>base</ci></logbase><ci>x</ci></apply></math>"
+  },
+  "log10 to log": {
+    "type": "FunctionNode",
+    "formula": "log10(x)",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><log/><ci>x</ci></apply></math>"
+  },
+  "log to ln": {
+    "type": "FunctionNode",
+    "formula": "log(x)",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><ln/><ci>x</ci></apply></math>"
+  },
+  "log2": {
+    "type": "FunctionNode",
+    "formula": "log2(x)",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><log/><logbase><cn>2</cn></logbase><ci>x</ci></apply></math>"
   }
 }
