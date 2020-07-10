@@ -3,9 +3,9 @@ const dictFunc = require('../dictionary');
 exports.name = 'toCMathMLNode';
 exports.path = 'expression.node.FunctionNode.prototype';
 exports.factory = function() {
-  return function() {
+  return function(csymbols = {}) {
    let args = this.args
-     .map((arg) => arg.toCMathMLNode());
+     .map((arg) => arg.toCMathMLNode(csymbols));
     if(this.fn.name==='cube'){
       return `<apply><power/>${args[0]}<cn>3</cn></apply>`;
     }else if(this.fn.name==='square'){

@@ -103,5 +103,10 @@
     "type": "FunctionNode",
     "formula": "log2(x)",
     "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><log/><logbase><cn>2</cn></logbase><ci>x</ci></apply></math>"
+  },
+  "csymbol test": {
+    "formula": "t/24",
+    "csymbols": { "t": "hello!" },
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><divide/><csymbol definitionURL=\"hello!\">t</csymbol><cn>24</cn></apply></math>"
   }
 }

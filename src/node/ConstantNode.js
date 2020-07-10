@@ -1,7 +1,7 @@
 exports.name = 'toCMathMLNode';
 exports.path = 'expression.node.ConstantNode.prototype';
 exports.factory =  function() {
-  return function() {
+  return function(csymbols = {}) {
     let check = String(this.value) // if it is exponential form
       .match(/^[\d]+[.]?[\d]*[e][+-][\d]+$/);
     if(check) {
