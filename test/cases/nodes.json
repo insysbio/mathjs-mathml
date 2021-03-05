@@ -108,5 +108,17 @@
     "formula": "t/24",
     "csymbols": { "t": "hello!" },
     "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><divide/><csymbol definitionURL=\"hello!\">t</csymbol><cn>24</cn></apply></math>"
+  },
+  "single true": {
+    "formula": "true",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><true/></math>"
+  },
+  "single false": {
+    "formula": "false",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><false/></math>"
+  },
+  "true or false": {
+    "formula": "true or false",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><or/><true/><false/></apply></math>"
   }
 }
