@@ -120,5 +120,17 @@
   "true or false": {
     "formula": "true or false",
     "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><or/><true/><false/></apply></math>"
+  },
+  "true and false": {
+    "formula": "true and false",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><and/><true/><false/></apply></math>"
+  },
+  "true xor false": {
+    "formula": "true xor false",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><xor/><true/><false/></apply></math>"
+  },
+  "not false": {
+    "formula": "not false",
+    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><not/><false/></apply></math>"
   }
 }

@@ -43,5 +43,8 @@
     "smaller": "lt",
     "equal" : "eq",
     "unequal" : "neq",
-    "or": "or"
+    "or": "or",
+    "and": "and",
+    "xor": "xor",
+    "not": "not"
 }
