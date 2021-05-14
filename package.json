@@ -1,6 +1,6 @@
 {
   "name": "mathjs-mathml",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Translation of mathjs object to MathML",
   "main": "src/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "coveralls": "^3.0.7",
-    "mathjs": "^5.10.3",
+    "mathjs": "^6.6.5",
     "mocha": "^7.2.0",
     "nyc": "^14.1.1"
   }

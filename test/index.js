@@ -1,6 +1,8 @@
 /* global describe it */
 
-const math = require('mathjs');
+//let math = require('mathjs');
+const { create, all } = require('mathjs');
+const math = create(all);
 const nodeCases = require('./cases/nodes.json');
 const { expect } = require('chai');
 

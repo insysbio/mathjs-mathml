@@ -11,17 +11,31 @@ Extends mathjs http://mathjs.org/ library by function translating the internal o
 
 This package do the same as [mathjs-cmathml](https://www.npmjs.com/package/mathjs-cmathml) but works without XMLDOM.
 
-## Installation
+## Installation for mathjs 5.x
 
 ```shell
-npm install mathjs-mathml
+npm install mathjs-mathml@5.10.3
 ```
-
-## nodejs
 
 ```javascript
 const math = require('mathjs');
 math.import(require('mathjs-mathml'));
+
+let mathml = math
+    .parse('x*sin(y/z)')
+    .toCMathML();
+console.log(mathml);
+```
+
+## Installation for mathjs 6.x
+
+```shell
+npm install mathjs-mathml@6.6.5
+```
+
+```javascript
+const { create, all } = require('mathjs');
+const math = create(all);
 
 let mathml = math
     .parse('x*sin(y/z)')
