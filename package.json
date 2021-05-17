@@ -28,12 +28,12 @@
   "homepage": "https://github.com/insysbio/mathjs-mathml#readme",
   "dependencies": {},
   "peerDependencies": {
-    "mathjs": "5.x - 6.x"
+    "mathjs": ">= 5"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "coveralls": "^3.0.7",
-    "mathjs": "^6.6.5",
+    "mathjs": "^9.4.0",
     "mocha": "^7.2.0",
     "nyc": "^14.1.1"
   }
