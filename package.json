@@ -33,7 +33,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "coveralls": "^3.0.7",
-    "mathjs": "^6.6.5",
+    "mathjs": "^7.5.1",
     "mocha": "^7.2.0",
     "nyc": "^14.1.1"
   }
