@@ -2,135 +2,135 @@
   "SymbolNode": {
     "type": "SymbolNode",
     "formula": "a",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><ci>a</ci></math>"
+    "expected": "<ci>a</ci>"
   },
   "ConstantNode 1": {
     "type": "ConstantNode",
     "formula": "1",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><cn>1</cn></math>"
+    "expected": "<cn>1</cn>"
   },
   "ConstantNode 2": {
     "type": "ConstantNode",
     "formula": "1.2e-9",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><cn type=\"e-notation\">1.2<sep/>-9</cn></math>"
+    "expected": "<cn type=\"e-notation\">1.2<sep/>-9</cn>"
   },
   "FunctionNode 0": {
     "type": "FunctionNode",
     "formula": "f()",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><f/></apply></math>"
+    "expected": "<apply><f/></apply>"
   },
   "FunctionNode 1": {
     "type": "FunctionNode",
     "formula": "g(x)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><g/><ci>x</ci></apply></math>"
+    "expected": "<apply><g/><ci>x</ci></apply>"
   },
   "FunctionNode 2": {
     "type": "FunctionNode",
     "formula": "h(x, y, 1)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><h/><ci>x</ci><ci>y</ci><cn>1</cn></apply></math>"
+    "expected": "<apply><h/><ci>x</ci><ci>y</ci><cn>1</cn></apply>"
   },
   "OperatorNode": {
     "type": "OperatorNode",
     "formula": "x+1",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><plus/><ci>x</ci><cn>1</cn></apply></math>"
+    "expected": "<apply><plus/><ci>x</ci><cn>1</cn></apply>"
   },
   "ParenthesisNode": {
     "type": "ParenthesisNode",
     "formula": "x*(y*z)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><times/><ci>x</ci><apply><times/><ci>y</ci><ci>z</ci></apply></apply></math>"
+    "expected": "<apply><times/><ci>x</ci><apply><times/><ci>y</ci><ci>z</ci></apply></apply>"
   },
   "FunctionAssignmentNode": {
     "type": "FunctionAssignmentNode",
     "formula": "f(x) = x",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><lambda><bvar><ci>x</ci></bvar><ci>x</ci></lambda></math>"
+    "expected": "<lambda><bvar><ci>x</ci></bvar><ci>x</ci></lambda>"
   },
   "ConditionalNode": {
     "type": "ConditionalNode",
     "formula": "a > 0 ? a : -a",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><piecewise><piece><ci>a</ci><apply><gt/><ci>a</ci><cn>0</cn></apply></piece><otherwise><apply><minus/><ci>a</ci></apply></otherwise></piecewise></math>"
+    "expected": "<piecewise><piece><ci>a</ci><apply><gt/><ci>a</ci><cn>0</cn></apply></piece><otherwise><apply><minus/><ci>a</ci></apply></otherwise></piecewise>"
   },
   "AssignmentNode(simple)": {
     "type": "AssignmentNode",
     "formula": "x = 5",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><eq/><ci>x</ci><cn>5</cn></apply></math>"
+    "expected": "<apply><eq/><ci>x</ci><cn>5</cn></apply>"
   },
   "AssignmentNode": {
     "type": "AssignmentNode",
     "formula": "x = a + 1",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><eq/><ci>x</ci><apply><plus/><ci>a</ci><cn>1</cn></apply></apply></math>"
+    "expected": "<apply><eq/><ci>x</ci><apply><plus/><ci>a</ci><cn>1</cn></apply></apply>"
   },
   "ArrayNode": {
     "type": "ArrayNode",
     "formula": "[1, 2, 3]",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><list><cn>1</cn><cn>2</cn><cn>3</cn></list></math>"
+    "expected": "<list><cn>1</cn><cn>2</cn><cn>3</cn></list>"
   },
   "BlockNode": {
     "type": "BlockNode",
     "formula": "a=1; b=2; c=3",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><list><apply><eq/><ci>a</ci><cn>1</cn></apply><apply><eq/><ci>b</ci><cn>2</cn></apply><apply><eq/><ci>c</ci><cn>3</cn></apply></list></math>"
+    "expected": "<list><apply><eq/><ci>a</ci><cn>1</cn></apply><apply><eq/><ci>b</ci><cn>2</cn></apply><apply><eq/><ci>c</ci><cn>3</cn></apply></list>"
   },
   "Complex expression": {
     "type": "Node",
     "formula": "x*y/z+a*exp(t)*log(15)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><plus/><apply><divide/><apply><times/><ci>x</ci><ci>y</ci></apply><ci>z</ci></apply><apply><times/><apply><times/><ci>a</ci><apply><exp/><ci>t</ci></apply></apply><apply><ln/><cn>15</cn></apply></apply></apply></math>"
+    "expected": "<apply><plus/><apply><divide/><apply><times/><ci>x</ci><ci>y</ci></apply><ci>z</ci></apply><apply><times/><apply><times/><ci>a</ci><apply><exp/><ci>t</ci></apply></apply><apply><ln/><cn>15</cn></apply></apply></apply>"
   },
   "cube function": {
     "type": "FunctionNode",
     "formula": "cube(x)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><power/><ci>x</ci><cn>3</cn></apply></math>"
+    "expected": "<apply><power/><ci>x</ci><cn>3</cn></apply>"
   },
   "square function": {
     "type": "FunctionNode",
     "formula": "square(x)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><power/><ci>x</ci><cn>2</cn></apply></math>"
+    "expected": "<apply><power/><ci>x</ci><cn>2</cn></apply>"
   },
   "log with base": {
     "type": "FunctionNode",
     "formula": "log(x, base)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><log/><logbase><ci>base</ci></logbase><ci>x</ci></apply></math>"
+    "expected": "<apply><log/><logbase><ci>base</ci></logbase><ci>x</ci></apply>"
   },
   "log10 to log": {
     "type": "FunctionNode",
     "formula": "log10(x)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><log/><ci>x</ci></apply></math>"
+    "expected": "<apply><log/><ci>x</ci></apply>"
   },
   "log to ln": {
     "type": "FunctionNode",
     "formula": "log(x)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><ln/><ci>x</ci></apply></math>"
+    "expected": "<apply><ln/><ci>x</ci></apply>"
   },
   "log2": {
     "type": "FunctionNode",
     "formula": "log2(x)",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><log/><logbase><cn>2</cn></logbase><ci>x</ci></apply></math>"
+    "expected": "<apply><log/><logbase><cn>2</cn></logbase><ci>x</ci></apply>"
   },
   "csymbol test": {
     "formula": "t/24",
     "csymbols": { "t": "hello!" },
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><divide/><csymbol definitionURL=\"hello!\">t</csymbol><cn>24</cn></apply></math>"
+    "expected": "<apply><divide/><csymbol definitionURL=\"hello!\">t</csymbol><cn>24</cn></apply>"
   },
   "single true": {
     "formula": "true",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><true/></math>"
+    "expected": "<true/>"
   },
   "single false": {
     "formula": "false",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><false/></math>"
+    "expected": "<false/>"
   },
   "true or false": {
     "formula": "true or false",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><or/><true/><false/></apply></math>"
+    "expected": "<apply><or/><true/><false/></apply>"
   },
   "true and false": {
     "formula": "true and false",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><and/><true/><false/></apply></math>"
+    "expected": "<apply><and/><true/><false/></apply>"
   },
   "true xor false": {
     "formula": "true xor false",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><xor/><true/><false/></apply></math>"
+    "expected": "<apply><xor/><true/><false/></apply>"
   },
   "not false": {
     "formula": "not false",
-    "expected": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><apply><not/><false/></apply></math>"
+    "expected": "<apply><not/><false/></apply>"
   }
 }
