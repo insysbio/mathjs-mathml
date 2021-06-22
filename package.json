@@ -1,6 +1,6 @@
 {
   "name": "mathjs-mathml",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Translation of mathjs object to MathML",
   "main": "src/index.js",
   "scripts": {

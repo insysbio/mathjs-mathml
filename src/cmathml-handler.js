@@ -31,15 +31,28 @@ function cMathMLHandler(_this, { handler, csymbols }){
   } else if (_this.type === 'FunctionNode') {
     let args = _this.args
       .map((arg) => arg.toString({handler, csymbols}));
-    if(_this.fn.name==='cube'){
+    if (_this.fn.name==='cube') {
       return `<apply><power/>${args[0]}<cn>3</cn></apply>`;
-    }else if(_this.fn.name==='square'){
+    } else if(_this.fn.name==='square') {
       return `<apply><power/>${args[0]}<cn>2</cn></apply>`;
-    }else if(_this.fn.name==='log' && _this.args.length===2){
+    } else if(_this.fn.name==='log' && _this.args.length===2) {
       return `<apply><log/><logbase>${args[1]}</logbase>${args[0]}</apply>`;
-    }else if(_this.fn.name==='log2'){
+    } else if(_this.fn.name==='log2') {
       return `<apply><log/><logbase><cn>2</cn></logbase>${args[0]}</apply>`;
-    }else{ // change only function name
+    } else if (_this.fn.name === 'piecewise') {
+      if (args.length === 0) throw new Error('piecewise function must have at least one argument.');
+
+      let hasOtherwise = args.length % 2 == 1; // is odd
+      let otherwiseTag = hasOtherwise ? `<otherwise>${args[args.length - 1]}</otherwise>` : ``;
+
+      let piecesCount = Math.floor(args.length / 2);
+      let piecesTags = [];
+      for (let i = 0; i < piecesCount; i++) {
+        let tag = `<piece>${args[2*i+1]}${args[2*i]}</piece>`;
+        piecesTags.push(tag);
+      }
+      return `<piecewise>${piecesTags.join('')}${otherwiseTag}</piecewise>`;
+    } else { // change only function name
       return `<apply><${dictFunc[_this.fn.name] || _this.fn.name}/>${args.join('')}</apply>`;
     }
   } else if (_this.type === 'OperatorNode') {

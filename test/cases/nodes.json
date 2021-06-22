@@ -132,5 +132,13 @@
   "not false": {
     "formula": "not false",
     "expected": "<apply><not/><false/></apply>"
+  },
+  "piecewise": {
+    "formula": "123 * piecewise(x > 1, 1, x > 2, 2, 0)",
+    "expected": "<apply><times/><cn>123</cn><piecewise><piece><cn>1</cn><apply><gt/><ci>x</ci><cn>1</cn></apply></piece><piece><cn>2</cn><apply><gt/><ci>x</ci><cn>2</cn></apply></piece><otherwise><cn>0</cn></otherwise></piecewise></apply>"
+  },
+  "piecewise without otherwise": {
+    "formula": "123 * piecewise(x > 1, 1, x > 2, 2)",
+    "expected": "<apply><times/><cn>123</cn><piecewise><piece><cn>1</cn><apply><gt/><ci>x</ci><cn>1</cn></apply></piece><piece><cn>2</cn><apply><gt/><ci>x</ci><cn>2</cn></apply></piece></piecewise></apply>"
   }
 }
