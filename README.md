@@ -34,5 +34,5 @@ console.log(mathml);
 
 ## Copyright
 
-InSysBio, Moscow, 2017-2021
+InSysBio, Moscow, 2017-2023
 http://insysbio.com
