@@ -7,14 +7,18 @@ const dictFunc = require('./dictionary');
     }
 */
 
-function cMathMLHandler(_this, { handler, csymbols }){
+function cMathMLHandler(_this, { handler, csymbols}) {
   if (_this.type === 'SymbolNode') {
     let definitionURL = csymbols && csymbols[_this.name];
-    if (typeof definitionURL === 'undefined') {
-      return `<ci>${_this.name}</ci>`;
-    } else {
+    if (_this.name === 'pi') {
+      return `<pi/>`;
+    } else if (_this.name === 'e') {
+      return `<exponentiale/>`;
+    } else if (definitionURL) {
       // use <csymbol here>
       return `<csymbol definitionURL="${definitionURL}">${_this.name}</csymbol>`;
+    } else {
+      return `<ci>${_this.name}</ci>`;
     }
   } else if (_this.type === 'ConstantNode') {
     let isExponential = String(_this.value) // if it is exponential form
@@ -25,6 +29,10 @@ function cMathMLHandler(_this, { handler, csymbols }){
       return `<cn type="e-notation">${value[1]}<sep/>${value[2]}</cn>`;
     } else if (isBoolean) {
       return `<${_this.value}/>`
+    } else if (_this.value === Infinity) {
+      return `<infinity/>`;
+    } else if (isNaN(_this.value)) {
+      return `<notanumber/>`;
     } else {
       return `<cn>${_this.value}</cn>`;
     }
@@ -37,8 +45,14 @@ function cMathMLHandler(_this, { handler, csymbols }){
       return `<apply><power/>${args[0]}<cn>2</cn></apply>`;
     } else if(_this.fn.name==='log' && _this.args.length===2) {
       return `<apply><log/><logbase>${args[1]}</logbase>${args[0]}</apply>`;
+    } else if(_this.fn.name==='logbase') {
+      return `<apply><log/><logbase>${args[1]}</logbase>${args[0]}</apply>`;
     } else if(_this.fn.name==='log2') {
       return `<apply><log/><logbase><cn>2</cn></logbase>${args[0]}</apply>`;
+    } else if (_this.fn.name==='nthRoot' && _this.args.length>=2) {
+      return `<apply><root/><degree>${args[1]}</degree>${args[0]}</apply>`;
+    } else if (_this.fn.name==='nthRoot' && _this.args.length===1) {
+      return `<apply><root/>${args[0]}</apply>`;
     } else if (_this.fn.name === 'piecewise') {
       if (args.length === 0) throw new Error('piecewise function must have at least one argument.');
 

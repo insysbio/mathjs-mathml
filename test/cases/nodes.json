@@ -140,5 +140,9 @@
   "piecewise without otherwise": {
     "formula": "123 * piecewise(x > 1, 1, x > 2, 2)",
     "expected": "<apply><times/><cn>123</cn><piecewise><piece><cn>1</cn><apply><gt/><ci>x</ci><cn>1</cn></apply></piece><piece><cn>2</cn><apply><gt/><ci>x</ci><cn>2</cn></apply></piece></piecewise></apply>"
+  },
+  "Infinity and e": {
+    "formula": "Infinity * e * NaN * pi",
+    "expected": "<apply><times/><apply><times/><apply><times/><infinity/><exponentiale/></apply><notanumber/></apply><pi/></apply>"
   }
 }
