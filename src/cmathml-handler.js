@@ -62,7 +62,7 @@ function cMathMLHandler(_this, { handler, csymbols}) {
       let piecesCount = Math.floor(args.length / 2);
       let piecesTags = [];
       for (let i = 0; i < piecesCount; i++) {
-        let tag = `<piece>${args[2*i+1]}${args[2*i]}</piece>`;
+        let tag = `<piece>${args[2*i]}${args[2*i+1]}</piece>`;
         piecesTags.push(tag);
       }
       return `<piecewise>${piecesTags.join('')}${otherwiseTag}</piecewise>`;
