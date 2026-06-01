@@ -4,7 +4,7 @@
 const { create, all } = require('mathjs');
 const math = create(all);
 const nodeCases = require('./cases/nodes.json');
-const { expect } = require('chai');
+const assert = require('node:assert/strict');
 
 // math.import(require('../src'));
 const { cMathMLHandler } = require('../src');
@@ -16,7 +16,7 @@ describe('Nodes:', function(){
       let expression = math.parse(case_i.formula);
       let str = expression.toString({handler: cMathMLHandler, csymbols: case_i.csymbols});
 
-      expect(str).to.be.equal(case_i.expected);
+      assert.equal(str, case_i.expected);
     });
   }
 });

@@ -5,8 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha test --recursive",
-    "test:cov": "nyc --reporter=lcov npm run test",
-    "coveralls": "nyc --reporter=text-lcov npm run test | coveralls"
+    "test:cov": "nyc --reporter=lcov npm run test"
   },
   "keywords": [
     "mathjs",
@@ -26,15 +25,17 @@
     "url": "https://github.com/insysbio/mathjs-mathml/issues"
   },
   "homepage": "https://github.com/insysbio/mathjs-mathml#readme",
-  "dependencies": {},
   "peerDependencies": {
     "mathjs": ">= 5"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "coveralls": "^3.0.7",
-    "mathjs": "^12.1.0",
-    "mocha": "^7.2.0",
-    "nyc": "^14.1.1"
+    "mathjs": "^15.2.0",
+    "mocha": "^11.7.6",
+    "nyc": "^18.0.0"
+  },
+  "overrides": {
+    "diff": "^9.0.0",
+    "serialize-javascript": "^7.0.5",
+    "uuid": "^11.1.1"
   }
 }
